@@ -11,8 +11,8 @@ export const get = async () => {
 	// const key = config.marvelKey;
 	// const privateKEY = import.meta.env.PRIVATE_KEY;
 	// const key = import.meta.env.PUBLIC_KEY;
-	const privateKEY = import.meta.env.PRIVATE_KEY;
-	const key = import.meta.env.PUBLIC_KEY;
+	const privateKEY = import.meta.env.VITE_PRIVATE_KEY;
+	const key = import.meta.env.VITE_PUBLIC_KEY;
 
 	const hash = md5(ts + privateKEY + key);
 
