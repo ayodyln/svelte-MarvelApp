@@ -17,7 +17,7 @@ export const apiDATA = writable([]);
 const genAPIEndpoint = () => {
 	get().then((data) => {
 		// console.log(data);
-		apiDATA.set(data.body.data.results);
+		apiDATA.set(data);
 	});
 };
 genAPIEndpoint();
