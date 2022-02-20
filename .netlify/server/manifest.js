@@ -34,7 +34,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-a1bee413.js", "js": ["start-a1bee413.js", "chunks/vendor-a7fbce38.js"], "css": [] },
+    entry: { "file": "start-ec9e98dd.js", "js": ["start-ec9e98dd.js", "chunks/vendor-a7fbce38.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
