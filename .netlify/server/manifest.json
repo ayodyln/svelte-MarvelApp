@@ -1,0 +1,59 @@
+{
+  ".svelte-kit/build/app.js": {
+    "file": "app.js",
+    "src": ".svelte-kit/build/app.js",
+    "isEntry": true,
+    "imports": [
+      "_index-b76b8f64.js"
+    ]
+  },
+  "src/routes/api/marvel/index.js": {
+    "file": "entries/endpoints/api/marvel/index.js",
+    "src": "src/routes/api/marvel/index.js",
+    "isEntry": true
+  },
+  "src/routes/api/marvel/marvelConfig.js": {
+    "file": "entries/endpoints/api/marvel/marvelConfig.js",
+    "src": "src/routes/api/marvel/marvelConfig.js",
+    "isEntry": true
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-b76b8f64.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/pages/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-b76b8f64.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-b76b8f64.js",
+      "src/routes/api/marvel/index.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-4eb50944.css"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "entries/pages/about.svelte.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-b76b8f64.js"
+    ]
+  },
+  "_index-b76b8f64.js": {
+    "file": "chunks/index-b76b8f64.js"
+  }
+}
