@@ -5,7 +5,7 @@ import md5 from 'crypto-js/md5.js';
 // import variables from '$lib/env';
 // console.log(variables);
 
-export const get = async () => {
+export const get = async (keys) => {
 	const ts = new Date().getTime();
 	// const privateKEY = config.marvelKEYSecret;
 	// const key = config.marvelKey;
@@ -16,7 +16,7 @@ export const get = async () => {
 
 	const hash = md5(ts + privateKEY + key);
 
-	const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
+	const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${keys}&hash=${hash}`;
 	const res = await fetch(url);
 	const data = await res.json();
 	return {

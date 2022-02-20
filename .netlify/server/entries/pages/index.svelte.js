@@ -71,7 +71,7 @@ function writable(value, start = import_index_b76b8f64.n) {
 }
 const apiDATA = writable([]);
 const genAPIEndpoint = () => {
-  (0, import_marvel.get)().then((data) => {
+  (0, import_marvel.get)("8a51610a0e82d6d4414b79e79a8bf29a").then((data) => {
     console.log(data.body.data.results);
     apiDATA.set(data.body.data.results);
   });
