@@ -16,7 +16,7 @@ export const get = async () => {
 
 	const hash = md5(ts + privateKEY + key);
 
-	const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
+	const url = `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
 	const res = await fetch(url);
 	const data = await res.json();
 	return {
