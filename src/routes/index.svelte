@@ -8,8 +8,8 @@
 
 <h1>This is my first SvelteProject</h1>
 
-{#each $apiDATA as x}
-	<p>{x.name}</p>
+{#each $apiDATA as data}
+	<h3>{data}</h3>
 {/each}
 
 <style>
