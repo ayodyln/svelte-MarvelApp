@@ -15,7 +15,7 @@ export const apiDATA = writable([]);
 // };
 
 const genAPIEndpoint = () => {
-	get().then((data) => {
+	get('8a51610a0e82d6d4414b79e79a8bf29a').then((data) => {
 		console.log(data.body.data.results);
 		apiDATA.set(data.body.data.results);
 	});
