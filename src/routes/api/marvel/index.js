@@ -12,9 +12,9 @@ export const get = async (keys) => {
 	// const privateKEY = import.meta.env.PRIVATE_KEY;
 	// const key = import.meta.env.PUBLIC_KEY;
 	const privateKEY = import.meta.env.VITE_PRIVATE_KEY;
-	const key = import.meta.env.VITE_PUBLIC_KEY;
+	// const key = import.meta.env.VITE_PUBLIC_KEY;
 
-	const hash = md5(ts + privateKEY + key);
+	const hash = md5(ts + privateKEY + keys);
 
 	const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${keys}&hash=${hash}`;
 	const res = await fetch(url);
