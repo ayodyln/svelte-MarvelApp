@@ -1,5 +1,5 @@
 <script>
-	import { apiDATA } from '../stores/apiCall.js';
+	import { apiDATA } from '../lib/apiCall.js';
 </script>
 
 <svelte:head>
