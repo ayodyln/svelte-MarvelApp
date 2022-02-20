@@ -1,4 +1,5 @@
-import { MD5 } from '../../../../node_modules/crypto-js';
+import md5 from "crypto-js/md5.js";
+
 // import { config } from './marvelConfig';
 
 // import variables from '$lib/env';
@@ -13,7 +14,7 @@ export const get = async () => {
 	const privateKEY = import.meta.env.VITE_PRIVATE_KEY;
 	const key = import.meta.env.VITE_PUBLIC_KEY;
 
-	const hash = MD5(ts + privateKEY + key);
+	const hash = md5(ts + privateKEY + key);
 
 	const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
 	const res = await fetch(url);
