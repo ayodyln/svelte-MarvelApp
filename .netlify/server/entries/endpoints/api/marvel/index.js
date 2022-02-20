@@ -35,7 +35,7 @@ const get = async () => {
   const privateKEY = "9eb2f9160d8e311cb9966e6f4823e8a9ffce431e";
   const key = "8a51610a0e82d6d4414b79e79a8bf29a";
   const hash = (0, import_md5.default)(ts + privateKEY + key);
-  const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
+  const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
   const res = await fetch(url);
   const data = await res.json();
   return {
