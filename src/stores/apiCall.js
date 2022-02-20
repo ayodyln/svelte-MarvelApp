@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
-import { get } from '../routes/api/marvel/index';
+import { get } from '../routes/api/marvel/index.js';
 
 export const apiDATA = writable([]);
- // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+// see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 
 //? Great for code journal; better than current.
 // const getAPIData = async function (url) {
@@ -14,21 +14,17 @@ export const apiDATA = writable([]);
 // 	}
 // };
 
-// const genAPIEndpoint = () => {
-// 	getAPIData(`https://swapi.dev/api/`).then((data) => {
-// 		let i = data;
-// 		console.log(i);
-// 		apiDATA.set(i);
-// 		return i;
-// 	});
-// };
-// genAPIEndpoint();
-
-export const loader = () => {
+const genAPIEndpoint = () => {
 	get().then((data) => {
-		console.log(data)
+		// console.log(data);
+		apiDATA.set(data.body.data.results);
 	});
 };
-loader();
+genAPIEndpoint();
 
-
+// export const loader = () => {
+// 	get().then((data) => {
+// 		console.log(data)
+// 	});
+// };
+// loader();
