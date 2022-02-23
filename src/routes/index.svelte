@@ -9,7 +9,7 @@
 <h1>This is my first SvelteProject</h1>
 
 {#each $apiDATA as data}
-	<h3>{data}</h3>
+	<h3>{data.name}</h3>
 {/each}
 
 <style>
