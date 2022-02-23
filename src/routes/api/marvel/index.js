@@ -7,7 +7,6 @@ export const get = async () => {
 
 	const hash = md5(ts + privateKEY + key);
 
-	console.log(import.meta)
 	
 	const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${key}&hash=${hash}`;
 	const res = await fetch(url);
