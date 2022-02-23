@@ -22,6 +22,7 @@ const genAPIEndpoint = () => {
 };
 genAPIEndpoint();
 
+
 // export const loader = () => {
 // 	get().then((data) => {
 // 		console.log(data)
