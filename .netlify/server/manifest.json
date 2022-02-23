@@ -12,11 +12,6 @@
     "src": "src/routes/api/marvel/index.js",
     "isEntry": true
   },
-  "src/routes/api/marvel/marvelConfig.js": {
-    "file": "entries/endpoints/api/marvel/marvelConfig.js",
-    "src": "src/routes/api/marvel/marvelConfig.js",
-    "isEntry": true
-  },
   "src/routes/__layout.svelte": {
     "file": "entries/pages/__layout.svelte.js",
     "src": "src/routes/__layout.svelte",

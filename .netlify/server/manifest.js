@@ -34,7 +34,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-a4505442.js", "js": ["start-a4505442.js", "chunks/vendor-a7fbce38.js"], "css": [] },
+    entry: { "file": "start-cea2bc6f.js", "js": ["start-cea2bc6f.js", "chunks/vendor-a7fbce38.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
@@ -65,12 +65,6 @@ const manifest = {
         pattern: /^\/api\/marvel\/?$/,
         params: null,
         load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/marvel/index.js")))
-      },
-      {
-        type: "endpoint",
-        pattern: /^\/api\/marvel\/marvelConfig\/?$/,
-        params: null,
-        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/marvel/marvelConfig.js")))
       }
     ]
   }

@@ -92,7 +92,7 @@ const Routes = (0, import_index_b76b8f64.c)(($$result, $$props, $$bindings, slot
 <h1 class="${"svelte-bt9zrl"}">This is my first SvelteProject</h1>
 
 ${(0, import_index_b76b8f64.d)($apiDATA, (data) => {
-    return `<h3>${(0, import_index_b76b8f64.e)(data)}</h3>`;
+    return `<h3>${(0, import_index_b76b8f64.e)(data.name)}</h3>`;
   })}`;
 });
 module.exports = __toCommonJS(stdin_exports);
