@@ -6,4 +6,5 @@
 <slot />
 
 <style>
+	@import 'bulma/css/bulma.css';
 </style>

@@ -13,6 +13,3 @@
 	<h3>{data.name}</h3>
 {/each} -->
 
-<style>
-	@import 'bulma/css/bulma.css';
-</style>
