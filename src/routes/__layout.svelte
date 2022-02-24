@@ -4,3 +4,6 @@
 
 <Nav />
 <slot />
+
+<style>
+</style>

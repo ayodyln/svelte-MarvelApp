@@ -24,15 +24,15 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => Routes
 });
-var import_index_b76b8f64 = require("../../chunks/index-b76b8f64.js");
+var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
 var import_marvel = require("../endpoints/api/marvel/index.js");
 var import_md5 = require("crypto-js/md5.js");
 const subscriber_queue = [];
-function writable(value, start = import_index_b76b8f64.n) {
+function writable(value, start = import_index_be7e25b7.n) {
   let stop;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
-    if ((0, import_index_b76b8f64.a)(value, new_value)) {
+    if ((0, import_index_be7e25b7.a)(value, new_value)) {
       value = new_value;
       if (stop) {
         const run_queue = !subscriber_queue.length;
@@ -52,11 +52,11 @@ function writable(value, start = import_index_b76b8f64.n) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe2(run, invalidate = import_index_b76b8f64.n) {
+  function subscribe(run, invalidate = import_index_be7e25b7.n) {
     const subscriber = [run, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || import_index_b76b8f64.n;
+      stop = start(set) || import_index_be7e25b7.n;
     }
     run(value);
     return () => {
@@ -67,32 +67,26 @@ function writable(value, start = import_index_b76b8f64.n) {
       }
     };
   }
-  return { set, update, subscribe: subscribe2 };
+  return { set, update, subscribe };
 }
 const apiDATA = writable([]);
 const genAPIEndpoint = () => {
   (0, import_marvel.get)().then((data) => {
-    console.log(data.body.data.results);
     apiDATA.set(data.body.data.results);
   });
 };
 genAPIEndpoint();
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "h1.svelte-bt9zrl{color:red}",
+  code: "@import 'bulma/css/bulma.css';",
   map: null
 };
-const Routes = (0, import_index_b76b8f64.c)(($$result, $$props, $$bindings, slots) => {
-  let $apiDATA, $$unsubscribe_apiDATA;
-  $$unsubscribe_apiDATA = (0, import_index_b76b8f64.b)(apiDATA, (value) => $apiDATA = value);
+const Routes = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  $$unsubscribe_apiDATA();
-  return `${$$result.head += `${$$result.title = `<title>Svelte Marvel API</title>`, ""}`, ""}
+  return `
 
-<h1 class="${"svelte-bt9zrl"}">This is my first SvelteProject</h1>
+${$$result.head += `${$$result.title = `<title>Sveltekit Marvel App</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-oenljx">`, ""}
 
-${(0, import_index_b76b8f64.d)($apiDATA, (data) => {
-    return `<h3>${(0, import_index_b76b8f64.e)(data.name)}</h3>`;
-  })}`;
+`;
 });
 module.exports = __toCommonJS(stdin_exports);

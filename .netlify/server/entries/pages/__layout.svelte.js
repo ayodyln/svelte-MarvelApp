@@ -24,13 +24,29 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => _layout
 });
-var import_index_b76b8f64 = require("../../chunks/index-b76b8f64.js");
-const Nav = (0, import_index_b76b8f64.c)(($$result, $$props, $$bindings, slots) => {
-  return `<nav><a href="${"/"}">Home</a>
-    <a href="${"/about"}">About</a></nav>`;
+var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+var nav_svelte_svelte_type_style_lang = "";
+const css = {
+  code: ".navbar-menu.svelte-9ngp5c{position:absolute;width:100%;z-index:1}",
+  map: null
+};
+const Nav = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css);
+  return `
+
+<nav class="${"navbar"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item"}" href="${"/"}"><h1>Marvel API Project</h1></a>
+
+		
+		<a role="${"button"}" class="${"navbar-burger"}" aria-label="${"menu"}" aria-expanded="${"false"}" data-target="${"navbarBasicExample"}" href="${"#"}"><span aria-hidden="${"true"}"></span>
+			<span aria-hidden="${"true"}"></span>
+			<span aria-hidden="${"true"}"></span></a></div>
+
+	<div id="${"navbarBasicExample"}" class="${"navbar-menu svelte-9ngp5c"}"><div class="${"navbar-start"}"><a class="${"navbar-item"}" href="${"/"}">Home </a>
+			<a class="${"navbar-item"}" href="${"/about"}">About </a></div></div>
+</nav>`;
 });
-const _layout = (0, import_index_b76b8f64.c)(($$result, $$props, $$bindings, slots) => {
-  return `${(0, import_index_b76b8f64.v)(Nav, "Nav").$$render($$result, {}, {}, {})}
+const _layout = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+  return `${(0, import_index_be7e25b7.v)(Nav, "Nav").$$render($$result, {}, {}, {})}
 ${slots.default ? slots.default({}) : ``}`;
 });
 module.exports = __toCommonJS(stdin_exports);

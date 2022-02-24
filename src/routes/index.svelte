@@ -1,19 +1,18 @@
 <script>
-	import { apiDATA } from '../lib/apiCall.js';
+	import { apiDATA } from './../lib/apiCall.js';
 </script>
 
+<!-- DONT FORGET TO LINK BACK TO MARVEL -->
+
 <svelte:head>
-	<title>Svelte Marvel API</title>
+	<title>Sveltekit Marvel App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
-<h1>This is my first SvelteProject</h1>
-
-{#each $apiDATA as data}
+<!-- {#each $apiDATA as data}
 	<h3>{data.name}</h3>
-{/each}
+{/each} -->
 
 <style>
-	h1 {
-		color: red;
-	}
+	@import 'bulma/css/bulma.css';
 </style>

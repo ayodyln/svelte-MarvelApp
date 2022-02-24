@@ -23,9 +23,7 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 var stdin_exports = {};
 __export(stdin_exports, {
   a: () => safe_not_equal,
-  b: () => subscribe,
   c: () => create_ssr_component,
-  d: () => each,
   e: () => escape,
   m: () => missing_component,
   n: () => noop,
@@ -45,13 +43,6 @@ function run_all(fns) {
 }
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
-}
-function subscribe(store, ...callbacks) {
-  if (store == null) {
-    return noop;
-  }
-  const unsub = store.subscribe(...callbacks);
-  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 let current_component;
 function set_current_component(component) {
@@ -75,13 +66,6 @@ const escaped = {
 };
 function escape(html) {
   return String(html).replace(/["'&<>]/g, (match) => escaped[match]);
-}
-function each(items, fn) {
-  let str = "";
-  for (let i = 0; i < items.length; i += 1) {
-    str += fn(items[i], i);
-  }
-  return str;
 }
 const missing_component = {
   $$render: () => ""

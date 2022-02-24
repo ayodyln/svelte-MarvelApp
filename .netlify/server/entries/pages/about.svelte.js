@@ -24,9 +24,9 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => About
 });
-var import_index_b76b8f64 = require("../../chunks/index-b76b8f64.js");
-const About = (0, import_index_b76b8f64.c)(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}`, ""}
+var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+const About = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+  return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-16ti4gl">`, ""}
 
 <h1>About</h1>
 <p>This is my attempt to use svelte to build something</p>`;
