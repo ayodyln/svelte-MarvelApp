@@ -25,28 +25,44 @@ __export(stdin_exports, {
   default: () => _layout
 });
 var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+const Footer = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+  return `<footer class="${"footer"}"><div class="${"content has-text-centered"}"><p><strong>Marvel API Research Project</strong> by
+			<a href="${"https://www.dylnsworks.com"}">Dylan Smith</a>. The source code is on
+			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}">Github</a>. The project is powered by
+			the
+			<a href="${"https://developer.marvel.com/"}">Marvel API</a> and
+			<a href="${"https://kit.svelte.dev/"}">Sveltekit</a>.
+		</p></div>
+</footer>`;
+});
 var nav_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".navbar-menu.svelte-9ngp5c{position:absolute;width:100%;z-index:1}",
+const css$1 = {
+  code: "@media only screen and (min-width: 560px){}@media only screen and (min-width: 1024px){}",
   map: null
 };
 const Nav = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
-  return `
-
-<nav class="${"navbar"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item"}" href="${"/"}"><h1>Marvel API Project</h1></a>
+  $$result.css.add(css$1);
+  return `<nav class="${"navbar is-fixed-top"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item"}" href="${"/"}"><h1 class="${"is-size-5"}">Marvel API Project</h1></a>
 
 		
 		<a role="${"button"}" class="${"navbar-burger"}" aria-label="${"menu"}" aria-expanded="${"false"}" data-target="${"navbarBasicExample"}" href="${"#"}"><span aria-hidden="${"true"}"></span>
 			<span aria-hidden="${"true"}"></span>
 			<span aria-hidden="${"true"}"></span></a></div>
 
-	<div id="${"navbarBasicExample"}" class="${"navbar-menu svelte-9ngp5c"}"><div class="${"navbar-start"}"><a class="${"navbar-item"}" href="${"/"}">Home </a>
-			<a class="${"navbar-item"}" href="${"/about"}">About </a></div></div>
+	<div id="${"navbarBasicExample"}" class="${"navbar-menu"}"><div class="${"navbar-start"}"><a class="${"navbar-item"}" href="${"/"}">Home </a>
+			<a class="${"navbar-item"}" href="${"/project"}">Project </a>
+			<a class="${"navbar-item"}" href="${"/doc"}">Doc </a></div></div>
 </nav>`;
 });
+var __layout_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "@import 'bulma/css/bulma.css';",
+  map: null
+};
 const _layout = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css);
   return `${(0, import_index_be7e25b7.v)(Nav, "Nav").$$render($$result, {}, {}, {})}
-${slots.default ? slots.default({}) : ``}`;
+${slots.default ? slots.default({}) : ``}
+${(0, import_index_be7e25b7.v)(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 module.exports = __toCommonJS(stdin_exports);

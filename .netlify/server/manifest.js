@@ -34,12 +34,13 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-80761afc.js", "js": ["start-80761afc.js", "chunks/vendor-116ac326.js"], "css": [] },
+    entry: { "file": "start-12558fa7.js", "js": ["start-12558fa7.js", "chunks/vendor-116ac326.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/2.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/3.js")))
+      () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/4.js")))
     ],
     routes: [
       {
@@ -53,9 +54,9 @@ const manifest = {
       },
       {
         type: "page",
-        pattern: /^\/about\/?$/,
+        pattern: /^\/project\/?$/,
         params: null,
-        path: "/about",
+        path: "/project",
         shadow: null,
         a: [0, 3],
         b: [1]
@@ -65,6 +66,15 @@ const manifest = {
         pattern: /^\/api\/marvel\/?$/,
         params: null,
         load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/marvel/index.js")))
+      },
+      {
+        type: "page",
+        pattern: /^\/doc\/?$/,
+        params: null,
+        path: "/doc",
+        shadow: null,
+        a: [0, 4],
+        b: [1]
       }
     ]
   }

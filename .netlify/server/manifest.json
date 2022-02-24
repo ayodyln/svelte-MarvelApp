@@ -20,7 +20,7 @@
       "_index-be7e25b7.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-03c7b450.css"
+      "assets/entries/pages/__layout.svelte-a18be143.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -40,12 +40,20 @@
       "src/routes/api/marvel/index.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-56b4a1af.css"
+      "assets/entries/pages/index.svelte-d1b72e00.css"
     ]
   },
-  "src/routes/about.svelte": {
-    "file": "entries/pages/about.svelte.js",
-    "src": "src/routes/about.svelte",
+  "src/routes/project.svelte": {
+    "file": "entries/pages/project.svelte.js",
+    "src": "src/routes/project.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-be7e25b7.js"
+    ]
+  },
+  "src/routes/doc.svelte": {
+    "file": "entries/pages/doc.svelte.js",
+    "src": "src/routes/doc.svelte",
     "isEntry": true,
     "imports": [
       "_index-be7e25b7.js"
