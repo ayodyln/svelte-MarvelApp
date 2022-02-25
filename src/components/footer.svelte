@@ -1,24 +1,29 @@
 <footer class="footer">
 	<div class="content has-text-centered">
 		<p>
-			<strong>Marvel API Research Project</strong> by
+			Student Research Project using
+			<strong>Marvel API</strong> by
 			<a href="https://www.dylnsworks.com">Dylan Smith</a>. The source code is on
 			<a href="https://github.com/ayodyln/svelte-MarvelApp">Github</a>. The project is powered by
 			the
-			<a href="https://developer.marvel.com/">Marvel API</a> and
+			<a href="https://marvel.com/">Data provided by Marvel. &#169; 2022 MARVEL</a> and
 			<a href="https://kit.svelte.dev/">Sveltekit</a>.
 		</p>
 	</div>
 </footer>
 
-<style>
+<style lang="scss">
 	footer {
-		background-color: var(--blue);
+		background-color: $red;
 		color: white;
+		padding: 1.5rem;
+		margin-top: 5rem;
 	}
 
-	p > strong {
-		color: white;
+	p {
+		strong {
+			color: white;
+		}
 	}
 
 	a {

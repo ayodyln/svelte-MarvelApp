@@ -19,15 +19,17 @@
 		"eslint-plugin-svelte3": "^3.2.1",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
+		"sass": "^1.46.0",
 		"svelte": "^3.44.0",
-		"svelte-preprocess": "^4.10.1",
-		"sass": "^1.46.0"
+		"svelte-preprocess": "^4.10.1"
 	},
 	"type": "module",
 	"dependencies": {
 		"bulma": "^0.9.3",
 		"crypto-js": "^4.1.1",
 		"dotenv": "^16.0.0",
-		"sass": "^1.49.8"
+		"sass": "^1.49.8",
+		"scss": "^0.2.4",
+		"swiper": "^8.0.6"
 	}
 }

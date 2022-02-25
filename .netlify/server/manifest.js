@@ -34,13 +34,14 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-12558fa7.js", "js": ["start-12558fa7.js", "chunks/vendor-116ac326.js"], "css": [] },
+    entry: { "file": "start-7e901811.js", "js": ["start-7e901811.js", "chunks/vendor-116ac326.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/2.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/4.js")))
+      () => Promise.resolve().then(() => __toESM(require("./nodes/4.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/5.js")))
     ],
     routes: [
       {
@@ -62,10 +63,37 @@ const manifest = {
         b: [1]
       },
       {
-        type: "endpoint",
-        pattern: /^\/api\/marvel\/?$/,
+        type: "page",
+        pattern: /^\/comics\/?$/,
         params: null,
-        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/marvel/index.js")))
+        path: "/comics",
+        shadow: null,
+        a: [0, 4],
+        b: [1]
+      },
+      {
+        type: "endpoint",
+        pattern: /^\/api\/characters\/?$/,
+        params: null,
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/characters/index.js")))
+      },
+      {
+        type: "endpoint",
+        pattern: /^\/api\/authors\/?$/,
+        params: null,
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/authors/index.js")))
+      },
+      {
+        type: "endpoint",
+        pattern: /^\/api\/comics\/?$/,
+        params: null,
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/comics/index.js")))
+      },
+      {
+        type: "endpoint",
+        pattern: /^\/api\/comic\/?$/,
+        params: null,
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/api/comic/index.js")))
       },
       {
         type: "page",
@@ -73,7 +101,7 @@ const manifest = {
         params: null,
         path: "/doc",
         shadow: null,
-        a: [0, 4],
+        a: [0, 5],
         b: [1]
       }
     ]

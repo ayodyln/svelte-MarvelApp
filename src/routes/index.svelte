@@ -1,5 +1,12 @@
 <script>
-	import { apiDATA } from './../lib/apiCall.js';
+	import {
+		apiDATAChar,
+		apiDATAComic,
+		apiDATAAuthor,
+		comicImage,
+		comicImageTitle,
+		comicLink
+	} from './../lib/apiCall.js';
 </script>
 
 <!-- DONT FORGET TO LINK BACK TO MARVEL -->
@@ -17,32 +24,45 @@
 </section>
 
 <section class="section" id="body">
-	<div class="container is-fullhd">
-		<div>
-			<h2>Comics</h2>
-			<p>Marvel comics are plentiful, pick one to start reading!</p>
-			<a class="button" href="/">See Comics!</a>
+	<div id="comicDiv">
+		<div class="comicDiv__childOne">
+			<div>
+				<p>Comics</p>
+				<p>Marvel comics are plentiful, pick one to start reading!</p>
+			</div>
+			<a class="button" href="/comics">See Comics</a>
+		</div>
+		<div class="comicDiv__childTwo">
+			<!-- <a href={$comicLink}>
+				<img src="{$comicImage}.jpg" alt={$comicImageTitle} loading="lazy" />
+			</a> -->
 		</div>
 	</div>
-	<div class="container is-fullhd">
+
+	<div>
 		<div>
-			<h2>Characters</h2>
-			<p>Explore the characters of the Marvel Multiverse!</p>
-			<a href="/" class="button">Explore Characters</a>
+			<div>
+				<h2>Characters</h2>
+				<p>Explore the characters of the Marvel Multiverse!</p>
+			</div>
+			<a href="/" class="button">See Characters</a>
 		</div>
 	</div>
-	<div class="container is-fullhd">
+
+	<div>
 		<div>
-			<h2>Authors</h2>
-			<p>The creators of the Marvel Comics and their stores.</p>
+			<div>
+				<h2>Authors</h2>
+				<p>The creators of the Marvel Comics and their stores.</p>
+			</div>
 			<a href="/" class="button">See Authors</a>
 		</div>
 	</div>
 </section>
 
-<style>
+<style lang="scss">
 	#body {
-		background-color: var(--black);
+		background-color: $black;
 	}
 	.hero {
 		margin-top: 52px;
@@ -50,5 +70,34 @@
 
 	div.container {
 		margin: 3rem;
+	}
+
+	#comicDiv {
+		display: flex;
+		justify-content: space-between;
+		background-color: lighten($black, $amount: 10);
+
+		div.comicDiv__childOne {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			div {
+				color: white;
+				:nth-child(1) {
+					font-size: 2.5rem;
+				}
+			}
+			a.button {
+				max-width: 10rem;
+			}
+		}
+		div.comicDiv__childTwo {
+			height: 185px;
+			a {
+				img {
+					width: 10rem;
+				}
+			}
+		}
 	}
 </style>

@@ -1,6 +1,6 @@
 import md5 from 'crypto-js/md5.js';
 
-export const get = async () => {
+export const getCharacters = async () => {
 	const ts = new Date().getTime();
 	const privateKEY = import.meta.env.VITE_PRIVATE_KEY;
 	const key = import.meta.env.VITE_PUBLIC_KEY;

@@ -25,8 +25,8 @@ __export(stdin_exports, {
   default: () => Routes
 });
 var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
-var import_marvel = require("../endpoints/api/marvel/index.js");
 var import_md5 = require("crypto-js/md5.js");
+var import_comic = require("../endpoints/api/comic/index.js");
 const subscriber_queue = [];
 function writable(value, start = import_index_be7e25b7.n) {
   let stop;
@@ -69,16 +69,20 @@ function writable(value, start = import_index_be7e25b7.n) {
   }
   return { set, update, subscribe };
 }
-const apiDATA = writable([]);
-const genAPIEndpoint = () => {
-  (0, import_marvel.get)().then((data) => {
-    apiDATA.set(data.body.data.results);
+const comicImage = writable([]);
+const comicImageTitle = writable([]);
+const comicLink = writable([]);
+(function comicSectionIMAGE(endPoint, writable2, secondWritable, link) {
+  endPoint().then((data) => {
+    console.log(data.body.data.results[0]);
+    writable2.set(data.body.data.results[0].thumbnail.path);
+    secondWritable.set(data.body.data.results[0].title);
+    link.set(data.body.data.results[0].urls[0].url);
   });
-};
-genAPIEndpoint();
+})(import_comic.getComic, comicImage, comicImageTitle, comicLink);
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".hero.svelte-1tv8l1r{margin-top:52px}",
+  code: "#body.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{background-color:#323031}.hero.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{margin-top:52px}#comicDiv.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{display:flex;justify-content:space-between;background-color:#4c494b}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne.svelte-j5qfr4.svelte-j5qfr4{display:flex;flex-direction:column;justify-content:space-between}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne div.svelte-j5qfr4.svelte-j5qfr4{color:white}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne div.svelte-j5qfr4 .svelte-j5qfr4:nth-child(1){font-size:2.5rem}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne a.button.svelte-j5qfr4.svelte-j5qfr4{max-width:10rem}#comicDiv.svelte-j5qfr4 div.comicDiv__childTwo.svelte-j5qfr4.svelte-j5qfr4{height:185px}",
   map: null
 };
 const Routes = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
@@ -87,15 +91,21 @@ const Routes = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slot
 
 ${$$result.head += `${$$result.title = `<title>Sveltekit Marvel App</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-oenljx">`, ""}
 
-<section class="${"hero svelte-1tv8l1r"}"><div class="${"hero-body"}"><p class="${"title"}">Marvel Web App</p>
-		<p class="${"subtitle"}">Student-Research Project</p></div></section>
+<section class="${"hero svelte-j5qfr4"}"><div class="${"hero-body svelte-j5qfr4"}"><p class="${"title svelte-j5qfr4"}">Marvel Web App</p>
+		<p class="${"subtitle svelte-j5qfr4"}">Student-Research Project</p></div></section>
 
-<section class="${"section"}"><div class="${"container is-fullhd"}"><div>This container is <strong>fullwidth</strong> <em>until</em> the <code>$fullhd</code> breakpoint.
-		</div></div>
-	<div class="${"container is-fullhd"}"><div>This container is <strong>fullwidth</strong> <em>until</em> the <code>$fullhd</code> breakpoint.
-		</div></div>
-	<div class="${"container is-fullhd"}"><div>This container is <strong>fullwidth</strong> <em>until</em> the <code>$fullhd</code> breakpoint.
-		</div></div>
+<section class="${"section svelte-j5qfr4"}" id="${"body"}"><div id="${"comicDiv"}" class="${"svelte-j5qfr4"}"><div class="${"comicDiv__childOne svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><p class="${"svelte-j5qfr4"}">Comics</p>
+				<p class="${"svelte-j5qfr4"}">Marvel comics are plentiful, pick one to start reading!</p></div>
+			<a class="${"button svelte-j5qfr4"}" href="${"/comics"}">See Comics</a></div>
+		<div class="${"comicDiv__childTwo svelte-j5qfr4"}"></div></div>
+
+	<div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><h2 class="${"svelte-j5qfr4"}">Characters</h2>
+				<p class="${"svelte-j5qfr4"}">Explore the characters of the Marvel Multiverse!</p></div>
+			<a href="${"/"}" class="${"button svelte-j5qfr4"}">See Characters</a></div></div>
+
+	<div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><h2 class="${"svelte-j5qfr4"}">Authors</h2>
+				<p class="${"svelte-j5qfr4"}">The creators of the Marvel Comics and their stores.</p></div>
+			<a href="${"/"}" class="${"button svelte-j5qfr4"}">See Authors</a></div></div>
 </section>`;
 });
 module.exports = __toCommonJS(stdin_exports);

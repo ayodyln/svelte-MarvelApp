@@ -22,7 +22,7 @@
 
 <nav class="navbar is-fixed-top" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="/">
+		<a class="navbar-item logo" href="/">
 			<h1 class="is-size-5">Marvel API Project</h1>
 		</a>
 
@@ -50,17 +50,30 @@
 	</div>
 </nav>
 
-<style>
+<style lang="scss">
 	nav {
-		background-color: var(--blue);
+		background-color: $red;
+	}
+
+	.navbar-burger:hover {
+		color: rgb(180, 179, 179);
 	}
 
 	.navbar-menu {
-		background-color: var(--blue);
+		background-color: $red;
 	}
 
 	a {
 		color: white;
+	}
+	a.navbar-item:hover {
+		color: $red;
+	}
+
+	a.logo:hover {
+		h1 {
+			color: white;
+		}
 	}
 
 	/* @media only screen and (min-width: 560px) {

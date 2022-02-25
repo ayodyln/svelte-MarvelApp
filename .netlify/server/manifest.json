@@ -7,9 +7,24 @@
       "_index-be7e25b7.js"
     ]
   },
-  "src/routes/api/marvel/index.js": {
-    "file": "entries/endpoints/api/marvel/index.js",
-    "src": "src/routes/api/marvel/index.js",
+  "src/routes/api/characters/index.js": {
+    "file": "entries/endpoints/api/characters/index.js",
+    "src": "src/routes/api/characters/index.js",
+    "isEntry": true
+  },
+  "src/routes/api/authors/index.js": {
+    "file": "entries/endpoints/api/authors/index.js",
+    "src": "src/routes/api/authors/index.js",
+    "isEntry": true
+  },
+  "src/routes/api/comics/index.js": {
+    "file": "entries/endpoints/api/comics/index.js",
+    "src": "src/routes/api/comics/index.js",
+    "isEntry": true
+  },
+  "src/routes/api/comic/index.js": {
+    "file": "entries/endpoints/api/comic/index.js",
+    "src": "src/routes/api/comic/index.js",
     "isEntry": true
   },
   "src/routes/__layout.svelte": {
@@ -20,7 +35,7 @@
       "_index-be7e25b7.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-a18be143.css"
+      "assets/entries/pages/__layout.svelte-85029624.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -37,15 +52,23 @@
     "isEntry": true,
     "imports": [
       "_index-be7e25b7.js",
-      "src/routes/api/marvel/index.js"
+      "src/routes/api/comic/index.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-d1b72e00.css"
+      "assets/entries/pages/index.svelte-bde1c406.css"
     ]
   },
   "src/routes/project.svelte": {
     "file": "entries/pages/project.svelte.js",
     "src": "src/routes/project.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-be7e25b7.js"
+    ]
+  },
+  "src/routes/comics.svelte": {
+    "file": "entries/pages/comics.svelte.js",
+    "src": "src/routes/comics.svelte",
     "isEntry": true,
     "imports": [
       "_index-be7e25b7.js"

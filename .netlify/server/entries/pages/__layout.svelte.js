@@ -25,33 +25,40 @@ __export(stdin_exports, {
   default: () => _layout
 });
 var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+var footer_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: "footer.svelte-19gzoxz.svelte-19gzoxz{background-color:#db3a34;color:white;padding:1.5rem;margin-top:5rem}p.svelte-19gzoxz strong.svelte-19gzoxz{color:white}a.svelte-19gzoxz.svelte-19gzoxz{color:white;text-decoration:underline}",
+  map: null
+};
 const Footer = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
-  return `<footer class="${"footer"}"><div class="${"content has-text-centered"}"><p><strong>Marvel API Research Project</strong> by
-			<a href="${"https://www.dylnsworks.com"}">Dylan Smith</a>. The source code is on
-			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}">Github</a>. The project is powered by
+  $$result.css.add(css$2);
+  return `<footer class="${"footer svelte-19gzoxz"}"><div class="${"content has-text-centered"}"><p class="${"svelte-19gzoxz"}">Student Research Project using
+			<strong class="${"svelte-19gzoxz"}">Marvel API</strong> by
+			<a href="${"https://www.dylnsworks.com"}" class="${"svelte-19gzoxz"}">Dylan Smith</a>. The source code is on
+			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}" class="${"svelte-19gzoxz"}">Github</a>. The project is powered by
 			the
-			<a href="${"https://developer.marvel.com/"}">Marvel API</a> and
-			<a href="${"https://kit.svelte.dev/"}">Sveltekit</a>.
+			<a href="${"https://marvel.com/"}" class="${"svelte-19gzoxz"}">Data provided by Marvel. \xA9 2022 MARVEL</a> and
+			<a href="${"https://kit.svelte.dev/"}" class="${"svelte-19gzoxz"}">Sveltekit</a>.
 		</p></div>
 </footer>`;
 });
 var nav_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "@media only screen and (min-width: 560px){}@media only screen and (min-width: 1024px){}",
+  code: "nav.svelte-1w4tpfu.svelte-1w4tpfu{background-color:#db3a34}.navbar-burger.svelte-1w4tpfu.svelte-1w4tpfu:hover{color:#b4b3b3}.navbar-menu.svelte-1w4tpfu.svelte-1w4tpfu{background-color:#db3a34}a.svelte-1w4tpfu.svelte-1w4tpfu{color:white}a.navbar-item.svelte-1w4tpfu.svelte-1w4tpfu:hover{color:#db3a34}a.logo.svelte-1w4tpfu:hover h1.svelte-1w4tpfu{color:white}",
   map: null
 };
 const Nav = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<nav class="${"navbar is-fixed-top"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item"}" href="${"/"}"><h1 class="${"is-size-5"}">Marvel API Project</h1></a>
+  return `<nav class="${"navbar is-fixed-top svelte-1w4tpfu"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item logo svelte-1w4tpfu"}" href="${"/"}"><h1 class="${"is-size-5 svelte-1w4tpfu"}">Marvel API Project</h1></a>
 
 		
-		<a role="${"button"}" class="${"navbar-burger"}" aria-label="${"menu"}" aria-expanded="${"false"}" data-target="${"navbarBasicExample"}" href="${"#"}"><span aria-hidden="${"true"}"></span>
+		<a role="${"button"}" class="${"navbar-burger svelte-1w4tpfu"}" aria-label="${"menu"}" aria-expanded="${"false"}" data-target="${"navbarBasicExample"}" href="${"#"}"><span aria-hidden="${"true"}"></span>
 			<span aria-hidden="${"true"}"></span>
 			<span aria-hidden="${"true"}"></span></a></div>
 
-	<div id="${"navbarBasicExample"}" class="${"navbar-menu"}"><div class="${"navbar-start"}"><a class="${"navbar-item"}" href="${"/"}">Home </a>
-			<a class="${"navbar-item"}" href="${"/project"}">Project </a>
-			<a class="${"navbar-item"}" href="${"/doc"}">Doc </a></div></div>
+	<div id="${"navbarBasicExample"}" class="${"navbar-menu svelte-1w4tpfu"}"><div class="${"navbar-start"}"><a class="${"navbar-item svelte-1w4tpfu"}" href="${"/"}">Home </a>
+			<a class="${"navbar-item svelte-1w4tpfu"}" href="${"/project"}">Project </a>
+			<a class="${"navbar-item svelte-1w4tpfu"}" href="${"/doc"}">Doc </a></div></div>
 </nav>`;
 });
 var __layout_svelte_svelte_type_style_lang = "";
