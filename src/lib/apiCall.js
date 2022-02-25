@@ -5,10 +5,10 @@ export const apiDATA = writable([]);
 
 const genAPIEndpoint = () => {
 	get().then((data) => {
-		// console.log(data.body.data.results);
+		console.log(data.body.data.results);
 		apiDATA.set(data.body.data.results);
 	});
 };
-genAPIEndpoint();
+// genAPIEndpoint();
 
 

@@ -51,9 +51,21 @@
 </nav>
 
 <style>
-	@media only screen and (min-width: 560px) {
+	nav {
+		background-color: var(--blue);
+	}
+
+	.navbar-menu {
+		background-color: var(--blue);
+	}
+
+	a {
+		color: white;
+	}
+
+	/* @media only screen and (min-width: 560px) {
 	}
 
 	@media only screen and (min-width: 1024px) {
-	}
+	} */
 </style>

@@ -12,4 +12,17 @@
 </footer>
 
 <style>
+	footer {
+		background-color: var(--blue);
+		color: white;
+	}
+
+	p > strong {
+		color: white;
+	}
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
 </style>
