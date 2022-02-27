@@ -68,36 +68,9 @@
 		margin-top: 52px;
 	}
 
-	div.container {
-		margin: 3rem;
-	}
-
 	#comicDiv {
 		display: flex;
 		justify-content: space-between;
 		background-color: lighten($black, $amount: 10);
-
-		div.comicDiv__childOne {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			div {
-				color: white;
-				:nth-child(1) {
-					font-size: 2.5rem;
-				}
-			}
-			a.button {
-				max-width: 10rem;
-			}
-		}
-		div.comicDiv__childTwo {
-			height: 185px;
-			a {
-				img {
-					width: 10rem;
-				}
-			}
-		}
 	}
 </style>
