@@ -1,6 +1,4 @@
 <script>
-	import { respond } from '/Users/dylan/codeSandbox/svelte-MarvelApp/.svelte-kit/runtime/server/index.js';
-	// import { comicImage } from './../../lib/apiCall.js';
 	export let comicImage;
 </script>
 
