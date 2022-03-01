@@ -1,22 +1,18 @@
-<script>
-	export let comicImage;
-</script>
-
-<a href="/comics">
-	<div id="comicDiv" style="background-image: url({comicImage}.jpg);">
-		<div class="comicChild">
-			<p class="is-size-3">Comics</p>
-			<p id="info">Marvel comics are plentiful, pick one to start reading!</p>
+<a href="/">
+	<div id="charDiv">
+		<div class="charChild">
+			<p class="is-size-3">Characters</p>
+			<p id="info">Explore the characters of the Marvel Multiverse!</p>
 		</div>
 	</div>
 </a>
 
 <style lang="scss">
-	div#comicDiv {
+	div#charDiv {
 		background: no-repeat right/40%;
 		border-radius: 1rem;
-		margin-bottom: 1rem 0;
-		div.comicChild {
+        margin: 1rem 0;
+		div.charChild {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -31,7 +27,7 @@
 				width: 15rem;
 			}
 		}
-		div.comicChild:hover {
+		div.charChild:hover {
 			box-shadow: $red 0px 0px 10px;
 		}
 	}

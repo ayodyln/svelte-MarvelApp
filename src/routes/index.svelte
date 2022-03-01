@@ -7,8 +7,10 @@
 		comicImageTitle,
 		comicLink
 	} from './../lib/apiCall.js';
-	import ComicSection from '../components/indexComponents/comicsSection.svelte';
 	import ComicsSection from '../components/indexComponents/comicsSection.svelte';
+	import CharSection from '../components/indexComponents/charactersSection.svelte';
+	import AuthorSection from '../components/indexComponents/authorsSection.svelte';
+	import AuthorsSection from '../components/indexComponents/authorsSection.svelte';
 </script>
 
 <!-- DONT FORGET TO LINK BACK TO MARVEL -->
@@ -25,33 +27,18 @@
 	</div>
 </section>
 
-<section class="section" id="body">
-	<ComicsSection comicImage={$comicImage} />
+<section id="body">
+	<ComicsSection comicImage={$comicImage}  />
 
-	<div>
-		<div>
-			<div>
-				<h2>Characters</h2>
-				<p>Explore the characters of the Marvel Multiverse!</p>
-			</div>
-			<a href="/" class="button">See Characters</a>
-		</div>
-	</div>
+	<CharSection  />
 
-	<div>
-		<div>
-			<div>
-				<h2>Authors</h2>
-				<p>The creators of the Marvel Comics and their stores.</p>
-			</div>
-			<a href="/" class="button">See Authors</a>
-		</div>
-	</div>
+	<AuthorsSection  />
 </section>
 
 <style lang="scss">
-	#body {
+	section#body {
 		background-color: $black;
+		padding: 1rem;
 	}
 	.hero {
 		margin-top: 52px;
