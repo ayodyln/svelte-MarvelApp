@@ -19,11 +19,7 @@
 		margin-top: 5rem;
 	}
 
-	p {
-		strong {
-			color: white;
-		}
-	}
+	
 
 	a {
 		color: white;

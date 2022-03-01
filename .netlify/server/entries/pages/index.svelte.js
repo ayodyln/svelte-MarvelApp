@@ -88,14 +88,8 @@ const css$1 = {
 };
 const ComicsSection = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   let { comicImage: comicImage2 } = $$props;
-  let { comicLink: comicLink2 } = $$props;
-  let { comicTitle } = $$props;
   if ($$props.comicImage === void 0 && $$bindings.comicImage && comicImage2 !== void 0)
     $$bindings.comicImage(comicImage2);
-  if ($$props.comicLink === void 0 && $$bindings.comicLink && comicLink2 !== void 0)
-    $$bindings.comicLink(comicLink2);
-  if ($$props.comicTitle === void 0 && $$bindings.comicTitle && comicTitle !== void 0)
-    $$bindings.comicTitle(comicTitle);
   $$result.css.add(css$1);
   return `<a href="${"/comics"}"><div id="${"comicDiv"}" style="${"background-image: url(" + (0, import_index_2492c888.e)(comicImage2) + ".jpg);"}" class="${"svelte-x5e1lk"}"><div class="${"comicChild svelte-x5e1lk"}"><p class="${"is-size-2"}">Comics</p>
 			<p>Marvel comics are plentiful, pick one to start reading!</p></div></div>
@@ -108,15 +102,9 @@ const css = {
 };
 const Routes = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   let $comicImage, $$unsubscribe_comicImage;
-  let $comicLink, $$unsubscribe_comicLink;
-  let $comicImageTitle, $$unsubscribe_comicImageTitle;
   $$unsubscribe_comicImage = (0, import_index_2492c888.b)(comicImage, (value) => $comicImage = value);
-  $$unsubscribe_comicLink = (0, import_index_2492c888.b)(comicLink, (value) => $comicLink = value);
-  $$unsubscribe_comicImageTitle = (0, import_index_2492c888.b)(comicImageTitle, (value) => $comicImageTitle = value);
   $$result.css.add(css);
   $$unsubscribe_comicImage();
-  $$unsubscribe_comicLink();
-  $$unsubscribe_comicImageTitle();
   return `
 
 ${$$result.head += `${$$result.title = `<title>Sveltekit Marvel App</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-oenljx">`, ""}
@@ -124,11 +112,7 @@ ${$$result.head += `${$$result.title = `<title>Sveltekit Marvel App</title>`, ""
 <section class="${"hero svelte-iv473q"}"><div class="${"hero-body"}"><p class="${"title"}">Marvel Web App</p>
 		<p class="${"subtitle"}">Student-Research Project</p></div></section>
 
-<section class="${"section svelte-iv473q"}" id="${"body"}">${(0, import_index_2492c888.v)(ComicsSection, "ComicsSection").$$render($$result, {
-    comicImage: $comicImage,
-    comicLink: $comicLink,
-    comicTitle: $comicImageTitle
-  }, {}, {})}
+<section class="${"section svelte-iv473q"}" id="${"body"}">${(0, import_index_2492c888.v)(ComicsSection, "ComicsSection").$$render($$result, { comicImage: $comicImage }, {}, {})}
 
 	<div><div><div><h2>Characters</h2>
 				<p>Explore the characters of the Marvel Multiverse!</p></div>

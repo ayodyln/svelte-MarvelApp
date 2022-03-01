@@ -27,17 +27,17 @@ __export(stdin_exports, {
 var import_index_2492c888 = require("../../chunks/index-2492c888.js");
 var footer_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "footer.svelte-19gzoxz{background-color:#db3a34;color:white;padding:1.5rem;margin-top:5rem}a.svelte-19gzoxz{color:white;text-decoration:underline}",
+  code: "footer.svelte-b2viq5{background-color:#db3a34;color:white;padding:1.5rem;margin-top:5rem}a.svelte-b2viq5{color:white;text-decoration:underline}",
   map: null
 };
 const Footer = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$2);
-  return `<footer class="${"footer svelte-19gzoxz"}"><div class="${"content has-text-centered"}"><p>Student Research Project by
-			<a href="${"https://www.dylnsworks.com"}" class="${"svelte-19gzoxz"}">Dylan Smith</a> \u2022 The source code is on
-			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}" class="${"svelte-19gzoxz"}">Github</a> \u2022 The project is
+  return `<footer class="${"footer svelte-b2viq5"}"><div class="${"content has-text-centered"}"><p>Student Research Project by
+			<a href="${"https://www.dylnsworks.com"}" class="${"svelte-b2viq5"}">Dylan Smith</a> \u2022 The source code is on
+			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}" class="${"svelte-b2viq5"}">Github</a> \u2022 The project is
 			powered by the
-			<a href="${"https://marvel.com/"}" class="${"svelte-19gzoxz"}">Data provided by Marvel. \xA9 2022 MARVEL</a> and
-			<a href="${"https://kit.svelte.dev/"}" class="${"svelte-19gzoxz"}">Sveltekit</a>.
+			<a href="${"https://marvel.com/"}" class="${"svelte-b2viq5"}">Data provided by Marvel. \xA9 2022 MARVEL</a> and
+			<a href="${"https://kit.svelte.dev/"}" class="${"svelte-b2viq5"}">Sveltekit</a>.
 		</p></div>
 </footer>`;
 });
