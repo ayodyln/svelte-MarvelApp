@@ -26,7 +26,7 @@
 </section>
 
 <section class="section" id="body">
-	<ComicsSection comicImage={$comicImage} comicLink={$comicLink} comicTitle={$comicImageTitle} />
+	<ComicsSection comicImage={$comicImage} />
 
 	<div>
 		<div>
