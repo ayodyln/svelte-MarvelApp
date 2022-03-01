@@ -23,6 +23,7 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 var stdin_exports = {};
 __export(stdin_exports, {
   a: () => safe_not_equal,
+  b: () => subscribe,
   c: () => create_ssr_component,
   e: () => escape,
   m: () => missing_component,
@@ -43,6 +44,13 @@ function run_all(fns) {
 }
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 let current_component;
 function set_current_component(component) {

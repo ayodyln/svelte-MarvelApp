@@ -24,8 +24,8 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => Project
 });
-var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
-const Project = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_2492c888 = require("../../chunks/index-2492c888.js");
+const Project = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   return ``;
 });
 module.exports = __toCommonJS(stdin_exports);

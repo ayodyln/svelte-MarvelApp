@@ -24,8 +24,8 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => Doc
 });
-var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
-const Doc = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_2492c888 = require("../../chunks/index-2492c888.js");
+const Doc = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-16ti4gl">`, ""}
 
 <section class="${"section"}"><h1 class="${"title"}">Documenation</h1>

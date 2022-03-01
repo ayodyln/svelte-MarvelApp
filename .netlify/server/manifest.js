@@ -31,10 +31,10 @@ __export(stdin_exports, {
 });
 const manifest = {
   appDir: "_app",
-  assets: /* @__PURE__ */ new Set(["favicon.png"]),
+  assets: /* @__PURE__ */ new Set(["captain-Favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-7e901811.js", "js": ["start-7e901811.js", "chunks/vendor-116ac326.js"], "css": [] },
+    entry: { "file": "start-9ff3cc60.js", "js": ["start-9ff3cc60.js", "chunks/vendor-7df2a94c.js", "chunks/preload-helper-ec9aa979.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),

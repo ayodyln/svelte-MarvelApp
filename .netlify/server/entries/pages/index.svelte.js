@@ -24,15 +24,16 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => Routes
 });
-var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+var import_index_2492c888 = require("../../chunks/index-2492c888.js");
 var import_md5 = require("crypto-js/md5.js");
 var import_comic = require("../endpoints/api/comic/index.js");
+var import_index_9f63d981 = require("../../chunks/index-9f63d981.js");
 const subscriber_queue = [];
-function writable(value, start = import_index_be7e25b7.n) {
+function writable(value, start = import_index_2492c888.n) {
   let stop;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
-    if ((0, import_index_be7e25b7.a)(value, new_value)) {
+    if ((0, import_index_2492c888.a)(value, new_value)) {
       value = new_value;
       if (stop) {
         const run_queue = !subscriber_queue.length;
@@ -52,11 +53,11 @@ function writable(value, start = import_index_be7e25b7.n) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe(run, invalidate = import_index_be7e25b7.n) {
+  function subscribe2(run, invalidate = import_index_2492c888.n) {
     const subscriber = [run, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || import_index_be7e25b7.n;
+      stop = start(set) || import_index_2492c888.n;
     }
     run(value);
     return () => {
@@ -67,7 +68,7 @@ function writable(value, start = import_index_be7e25b7.n) {
       }
     };
   }
-  return { set, update, subscribe };
+  return { set, update, subscribe: subscribe2 };
 }
 const comicImage = writable([]);
 const comicImageTitle = writable([]);
@@ -80,32 +81,62 @@ const comicLink = writable([]);
     link.set(data.body.data.results[0].urls[0].url);
   });
 })(import_comic.getComic, comicImage, comicImageTitle, comicLink);
-var index_svelte_svelte_type_style_lang = "";
-const css = {
-  code: "#body.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{background-color:#323031}.hero.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{margin-top:52px}#comicDiv.svelte-j5qfr4.svelte-j5qfr4.svelte-j5qfr4{display:flex;justify-content:space-between;background-color:#4c494b}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne.svelte-j5qfr4.svelte-j5qfr4{display:flex;flex-direction:column;justify-content:space-between}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne div.svelte-j5qfr4.svelte-j5qfr4{color:white}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne div.svelte-j5qfr4 .svelte-j5qfr4:nth-child(1){font-size:2.5rem}#comicDiv.svelte-j5qfr4 div.comicDiv__childOne a.button.svelte-j5qfr4.svelte-j5qfr4{max-width:10rem}#comicDiv.svelte-j5qfr4 div.comicDiv__childTwo.svelte-j5qfr4.svelte-j5qfr4{height:185px}",
+var comicsSection_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: "div#comicDiv.svelte-x5e1lk.svelte-x5e1lk{background:no-repeat right/40%;border-radius:1rem}div#comicDiv.svelte-x5e1lk div.comicChild.svelte-x5e1lk{display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;background:linear-gradient(to right, #1a1a1a 60%, rgba(0, 0, 0, 0) 100%);padding:1rem;color:white;border-radius:1rem}div#comicDiv.svelte-x5e1lk div.comicChild.svelte-x5e1lk:hover{box-shadow:#db3a34 0px 0px 10px}",
   map: null
 };
-const Routes = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+const ComicsSection = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
+  let { comicImage: comicImage2 } = $$props;
+  let { comicLink: comicLink2 } = $$props;
+  let { comicTitle } = $$props;
+  if ($$props.comicImage === void 0 && $$bindings.comicImage && comicImage2 !== void 0)
+    $$bindings.comicImage(comicImage2);
+  if ($$props.comicLink === void 0 && $$bindings.comicLink && comicLink2 !== void 0)
+    $$bindings.comicLink(comicLink2);
+  if ($$props.comicTitle === void 0 && $$bindings.comicTitle && comicTitle !== void 0)
+    $$bindings.comicTitle(comicTitle);
+  $$result.css.add(css$1);
+  return `<a href="${"/comics"}"><div id="${"comicDiv"}" style="${"background-image: url(" + (0, import_index_2492c888.e)(comicImage2) + ".jpg);"}" class="${"svelte-x5e1lk"}"><div class="${"comicChild svelte-x5e1lk"}"><p class="${"is-size-2"}">Comics</p>
+			<p>Marvel comics are plentiful, pick one to start reading!</p></div></div>
+</a>`;
+});
+var index_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "#body.svelte-iv473q{background-color:#323031}.hero.svelte-iv473q{margin-top:52px}",
+  map: null
+};
+const Routes = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
+  let $comicImage, $$unsubscribe_comicImage;
+  let $comicLink, $$unsubscribe_comicLink;
+  let $comicImageTitle, $$unsubscribe_comicImageTitle;
+  $$unsubscribe_comicImage = (0, import_index_2492c888.b)(comicImage, (value) => $comicImage = value);
+  $$unsubscribe_comicLink = (0, import_index_2492c888.b)(comicLink, (value) => $comicLink = value);
+  $$unsubscribe_comicImageTitle = (0, import_index_2492c888.b)(comicImageTitle, (value) => $comicImageTitle = value);
   $$result.css.add(css);
+  $$unsubscribe_comicImage();
+  $$unsubscribe_comicLink();
+  $$unsubscribe_comicImageTitle();
   return `
 
 ${$$result.head += `${$$result.title = `<title>Sveltekit Marvel App</title>`, ""}<meta name="${"viewport"}" content="${"width=device-width, initial-scale=1"}" data-svelte="svelte-oenljx">`, ""}
 
-<section class="${"hero svelte-j5qfr4"}"><div class="${"hero-body svelte-j5qfr4"}"><p class="${"title svelte-j5qfr4"}">Marvel Web App</p>
-		<p class="${"subtitle svelte-j5qfr4"}">Student-Research Project</p></div></section>
+<section class="${"hero svelte-iv473q"}"><div class="${"hero-body"}"><p class="${"title"}">Marvel Web App</p>
+		<p class="${"subtitle"}">Student-Research Project</p></div></section>
 
-<section class="${"section svelte-j5qfr4"}" id="${"body"}"><div id="${"comicDiv"}" class="${"svelte-j5qfr4"}"><div class="${"comicDiv__childOne svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><p class="${"svelte-j5qfr4"}">Comics</p>
-				<p class="${"svelte-j5qfr4"}">Marvel comics are plentiful, pick one to start reading!</p></div>
-			<a class="${"button svelte-j5qfr4"}" href="${"/comics"}">See Comics</a></div>
-		<div class="${"comicDiv__childTwo svelte-j5qfr4"}"></div></div>
+<section class="${"section svelte-iv473q"}" id="${"body"}">${(0, import_index_2492c888.v)(ComicsSection, "ComicsSection").$$render($$result, {
+    comicImage: $comicImage,
+    comicLink: $comicLink,
+    comicTitle: $comicImageTitle
+  }, {}, {})}
 
-	<div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><h2 class="${"svelte-j5qfr4"}">Characters</h2>
-				<p class="${"svelte-j5qfr4"}">Explore the characters of the Marvel Multiverse!</p></div>
-			<a href="${"/"}" class="${"button svelte-j5qfr4"}">See Characters</a></div></div>
+	<div><div><div><h2>Characters</h2>
+				<p>Explore the characters of the Marvel Multiverse!</p></div>
+			<a href="${"/"}" class="${"button"}">See Characters</a></div></div>
 
-	<div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><div class="${"svelte-j5qfr4"}"><h2 class="${"svelte-j5qfr4"}">Authors</h2>
-				<p class="${"svelte-j5qfr4"}">The creators of the Marvel Comics and their stores.</p></div>
-			<a href="${"/"}" class="${"button svelte-j5qfr4"}">See Authors</a></div></div>
+	<div><div><div><h2>Authors</h2>
+				<p>The creators of the Marvel Comics and their stores.</p></div>
+			<a href="${"/"}" class="${"button"}">See Authors</a></div></div>
 </section>`;
 });
 module.exports = __toCommonJS(stdin_exports);

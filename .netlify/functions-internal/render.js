@@ -2,10 +2,10 @@ const { init } = require('../handler.js');
 
 exports.handler = init({
 	appDir: "_app",
-	assets: new Set(["favicon.png"]),
+	assets: new Set(["captain-Favicon.png"]),
 	_: {
 		mime: {".png":"image/png"},
-		entry: {"file":"start-7e901811.js","js":["start-7e901811.js","chunks/vendor-116ac326.js"],"css":[]},
+		entry: {"file":"start-9ff3cc60.js","js":["start-9ff3cc60.js","chunks/vendor-7df2a94c.js","chunks/preload-helper-ec9aa979.js"],"css":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),

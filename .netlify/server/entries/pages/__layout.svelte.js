@@ -24,19 +24,18 @@ var stdin_exports = {};
 __export(stdin_exports, {
   default: () => _layout
 });
-var import_index_be7e25b7 = require("../../chunks/index-be7e25b7.js");
+var import_index_2492c888 = require("../../chunks/index-2492c888.js");
 var footer_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "footer.svelte-19gzoxz.svelte-19gzoxz{background-color:#db3a34;color:white;padding:1.5rem;margin-top:5rem}p.svelte-19gzoxz strong.svelte-19gzoxz{color:white}a.svelte-19gzoxz.svelte-19gzoxz{color:white;text-decoration:underline}",
+  code: "footer.svelte-19gzoxz{background-color:#db3a34;color:white;padding:1.5rem;margin-top:5rem}a.svelte-19gzoxz{color:white;text-decoration:underline}",
   map: null
 };
-const Footer = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+const Footer = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$2);
-  return `<footer class="${"footer svelte-19gzoxz"}"><div class="${"content has-text-centered"}"><p class="${"svelte-19gzoxz"}">Student Research Project using
-			<strong class="${"svelte-19gzoxz"}">Marvel API</strong> by
-			<a href="${"https://www.dylnsworks.com"}" class="${"svelte-19gzoxz"}">Dylan Smith</a>. The source code is on
-			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}" class="${"svelte-19gzoxz"}">Github</a>. The project is powered by
-			the
+  return `<footer class="${"footer svelte-19gzoxz"}"><div class="${"content has-text-centered"}"><p>Student Research Project by
+			<a href="${"https://www.dylnsworks.com"}" class="${"svelte-19gzoxz"}">Dylan Smith</a> \u2022 The source code is on
+			<a href="${"https://github.com/ayodyln/svelte-MarvelApp"}" class="${"svelte-19gzoxz"}">Github</a> \u2022 The project is
+			powered by the
 			<a href="${"https://marvel.com/"}" class="${"svelte-19gzoxz"}">Data provided by Marvel. \xA9 2022 MARVEL</a> and
 			<a href="${"https://kit.svelte.dev/"}" class="${"svelte-19gzoxz"}">Sveltekit</a>.
 		</p></div>
@@ -47,7 +46,7 @@ const css$1 = {
   code: "nav.svelte-1w4tpfu.svelte-1w4tpfu{background-color:#db3a34}.navbar-burger.svelte-1w4tpfu.svelte-1w4tpfu:hover{color:#b4b3b3}.navbar-menu.svelte-1w4tpfu.svelte-1w4tpfu{background-color:#db3a34}a.svelte-1w4tpfu.svelte-1w4tpfu{color:white}a.navbar-item.svelte-1w4tpfu.svelte-1w4tpfu:hover{color:#db3a34}a.logo.svelte-1w4tpfu:hover h1.svelte-1w4tpfu{color:white}",
   map: null
 };
-const Nav = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+const Nav = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
   return `<nav class="${"navbar is-fixed-top svelte-1w4tpfu"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item logo svelte-1w4tpfu"}" href="${"/"}"><h1 class="${"is-size-5 svelte-1w4tpfu"}">Marvel API Project</h1></a>
 
@@ -66,10 +65,10 @@ const css = {
   code: "@import 'bulma/css/bulma.css';",
   map: null
 };
-const _layout = (0, import_index_be7e25b7.c)(($$result, $$props, $$bindings, slots) => {
+const _layout = (0, import_index_2492c888.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${(0, import_index_be7e25b7.v)(Nav, "Nav").$$render($$result, {}, {}, {})}
+  return `${(0, import_index_2492c888.v)(Nav, "Nav").$$render($$result, {}, {}, {})}
 ${slots.default ? slots.default({}) : ``}
-${(0, import_index_be7e25b7.v)(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+${(0, import_index_2492c888.v)(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 module.exports = __toCommonJS(stdin_exports);

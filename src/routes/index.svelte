@@ -7,6 +7,8 @@
 		comicImageTitle,
 		comicLink
 	} from './../lib/apiCall.js';
+	import ComicSection from '../components/indexComponents/comicsSection.svelte';
+	import ComicsSection from '../components/indexComponents/comicsSection.svelte';
 </script>
 
 <!-- DONT FORGET TO LINK BACK TO MARVEL -->
@@ -24,20 +26,7 @@
 </section>
 
 <section class="section" id="body">
-	<div id="comicDiv">
-		<div class="comicDiv__childOne">
-			<div>
-				<p>Comics</p>
-				<p>Marvel comics are plentiful, pick one to start reading!</p>
-			</div>
-			<a class="button" href="/comics">See Comics</a>
-		</div>
-		<div class="comicDiv__childTwo">
-			<!-- <a href={$comicLink}>
-				<img src="{$comicImage}.jpg" alt={$comicImageTitle} loading="lazy" />
-			</a> -->
-		</div>
-	</div>
+	<ComicsSection comicImage={$comicImage} comicLink={$comicLink} comicTitle={$comicImageTitle} />
 
 	<div>
 		<div>
@@ -66,11 +55,5 @@
 	}
 	.hero {
 		margin-top: 52px;
-	}
-
-	#comicDiv {
-		display: flex;
-		justify-content: space-between;
-		background-color: lighten($black, $amount: 10);
 	}
 </style>
