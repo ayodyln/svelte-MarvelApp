@@ -1,5 +1,9 @@
+<script>
+	export let charImage;
+</script>
+
 <a href="/">
-	<div id="charDiv">
+	<div id="charDiv" style="background-image: url({charImage}.jpg);">
 		<div class="charChild">
 			<p class="is-size-3">Characters</p>
 			<p id="info">Explore the characters of the Marvel Multiverse!</p>
@@ -11,7 +15,7 @@
 	div#charDiv {
 		background: no-repeat right/40%;
 		border-radius: 1rem;
-        margin: 1rem 0;
+		margin: 1rem 0;
 		div.charChild {
 			display: flex;
 			flex-direction: column;

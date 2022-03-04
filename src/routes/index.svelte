@@ -1,19 +1,9 @@
 <script>
-	import {
-		apiDATAChar,
-		apiDATAComic,
-		apiDATAAuthor,
-		comicImage,
-		comicImageTitle,
-		comicLink
-	} from './../lib/apiCall.js';
+	import { apiDATAChar, apiDATAComic, apiDATAAuthor, comicImage, myArr } from '$lib/apiCall.js';
 	import ComicsSection from '../components/indexComponents/comicsSection.svelte';
 	import CharSection from '../components/indexComponents/charactersSection.svelte';
-	import AuthorSection from '../components/indexComponents/authorsSection.svelte';
 	import AuthorsSection from '../components/indexComponents/authorsSection.svelte';
 </script>
-
-<!-- DONT FORGET TO LINK BACK TO MARVEL -->
 
 <svelte:head>
 	<title>Sveltekit Marvel App</title>
@@ -28,11 +18,11 @@
 </section>
 
 <section id="body">
-	<ComicsSection comicImage={$comicImage}  />
+	<ComicsSection comicImage={$comicImage} />
 
-	<CharSection  />
+	<CharSection charImage={$myArr}/>
 
-	<AuthorsSection  />
+	<AuthorsSection />
 </section>
 
 <style lang="scss">

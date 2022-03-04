@@ -1,17 +1,19 @@
 /* eslint-disable no-unused-vars */
-import { getAuthor } from '../routes/api/authors/index.js';
+import { getCharacters } from '../routes/api/character/index.js';
 import { writable } from 'svelte/store';
-import { getCharacters } from '../routes/api/characters/index.js';
-import { getComics } from '../routes/api/comics';
-import { getComic } from '../routes/api/comic/index.js';
+import { getRandomComic } from '../routes/api/randomComic/index.js';
+import { grabCharacterImage } from './functions/grabCharacter.js';
 
 export const apiDATAChar = writable([]);
 export const apiDATAComic = writable([]);
 export const apiDATAAuthor = writable([]);
 
+export const charData = writable([]);
+export const myArr = writable([]);
+
 export const comicImage = writable([]);
-export const comicImageTitle = writable([]);
-export const comicLink = writable([]);
+
+export const charImage = writable([]);
 
 export const genAPIEndpoint = (endPoint, writable, limit) => {
 	endPoint(limit).then((data) => {
@@ -23,11 +25,13 @@ export const genAPIEndpoint = (endPoint, writable, limit) => {
 // genAPIEndpoint(getComics, apiDATAComic);
 // genAPIEndpoint(getAuthor, apiDATAAuthor);
 
-(function comicSectionIMAGE(endPoint, writable, secondWritable, link) {
+function indexComicSection(endPoint, writable) {
 	endPoint().then((data) => {
-		console.log(data.body.data.results[0]);
 		writable.set(data.body.data.results[0].thumbnail.path);
-		secondWritable.set(data.body.data.results[0].title);
-		link.set(data.body.data.results[0].urls[0].url);
 	});
-})(getComic, comicImage, comicImageTitle, comicLink);
+}
+indexComicSection(getRandomComic, comicImage);
+
+(function indexCharacterSection() {
+	getCharacters().then((data) => grabCharacterImage(data.body.data.results, myArr));
+})();

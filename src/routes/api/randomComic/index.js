@@ -1,12 +1,7 @@
 import md5 from 'crypto-js/md5.js';
+import { getRandomInt } from '../../../lib/functions/random.js';
 
-function getRandomInt(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-}
-
-export const getComic = async () => {
+export const getRandomComic = async () => {
 	const ts = new Date().getTime();
 	const privateKEY = import.meta.env.VITE_PRIVATE_KEY;
 	const key = import.meta.env.VITE_PUBLIC_KEY;
