@@ -1,5 +1,12 @@
 <script>
-	import { apiDATAChar, apiDATAComic, apiDATAAuthor, comicImage, charImage } from '$lib/apiCall.js';
+	import {
+		apiDATAChar,
+		apiDATAComic,
+		apiDATAAuthor,
+		comicImage,
+		charImage,
+		authorImage
+	} from '$lib/apiCall.js';
 	import ComicsSection from '../components/indexComponents/comicsSection.svelte';
 	import CharSection from '../components/indexComponents/charactersSection.svelte';
 	import AuthorsSection from '../components/indexComponents/authorsSection.svelte';

@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <a href="/">
 	<div id="authorDiv">
 		<div class="authorChild">
