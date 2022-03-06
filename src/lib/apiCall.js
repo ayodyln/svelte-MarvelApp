@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
 import { getCharacters } from '../routes/api/character/index.js';
 import { writable } from 'svelte/store';
 import { getRandomComic } from '../routes/api/randomComic/index.js';
 import { grabCharacterImage } from './functions/grabCharacter.js';
-import { getAuthor } from '../routes/api/authors/index.js';
 // import { grabAuthorImage } from './functions/grabAuthor.js';
 
 export const apiDATAChar = writable([]);

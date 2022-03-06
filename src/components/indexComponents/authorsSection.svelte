@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<a href="/">
-	<div id="authorDiv">
+<a href="/" id="myCard">
+	<div id="authorDiv" style="background-image: url('../../../static/captain-Favicon.png');">
 		<div class="authorChild">
 			<p class="is-size-3">Authors</p>
 			<p id="info">The great authors of the Marvel Universe!</p>
@@ -31,6 +31,17 @@
 		}
 		div.authorChild:hover {
 			box-shadow: $red 0px 0px 10px;
+		}
+	}
+
+	@media only screen and (min-width: 560px) {
+		div#authorDiv {
+			margin-bottom: 0;
+			div.authorChild {
+				p#info {
+					width: 100%;
+				}
+			}
 		}
 	}
 </style>

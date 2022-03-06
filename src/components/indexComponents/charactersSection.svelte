@@ -2,7 +2,7 @@
 	export let charImage;
 </script>
 
-<a href="/">
+<a href="/" id="myCard">
 	<div id="charDiv" style="background-image: url({charImage}.jpg);">
 		<div class="charChild">
 			<p class="is-size-3">Characters</p>
@@ -33,6 +33,18 @@
 		}
 		div.charChild:hover {
 			box-shadow: $red 0px 0px 10px;
+		}
+	}
+
+	@media only screen and (min-width: 560px) {
+		div#charDiv {
+			margin: 0;
+			background: center;
+			div.charChild {
+				p#info {
+					width: 100%;
+				}
+			}
 		}
 	}
 </style>

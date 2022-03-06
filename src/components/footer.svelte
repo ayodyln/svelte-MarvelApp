@@ -16,11 +16,7 @@
 		background-color: $red;
 		color: white;
 		padding: 1.5rem;
-		margin-top: 5rem;
 	}
-
-	
-
 	a {
 		color: white;
 		text-decoration: underline;

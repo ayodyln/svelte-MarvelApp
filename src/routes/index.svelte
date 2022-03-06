@@ -10,6 +10,7 @@
 	import ComicsSection from '../components/indexComponents/comicsSection.svelte';
 	import CharSection from '../components/indexComponents/charactersSection.svelte';
 	import AuthorsSection from '../components/indexComponents/authorsSection.svelte';
+	import HeroSection from '../components/indexComponents/heroSection.svelte';
 </script>
 
 <svelte:head>
@@ -17,27 +18,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
-<section class="hero">
-	<div class="hero-body">
-		<p class="title">Marvel Web App</p>
-		<p class="subtitle">Student-Research Project</p>
+<main>
+	<div id="hero__wrapper">
+		<HeroSection />
 	</div>
-</section>
 
-<section id="body">
-	<ComicsSection comicImage={$comicImage} />
+	<section id="body">
+		<ComicsSection comicImage={$comicImage} />
 
-	<CharSection charImage={$charImage} />
+		<CharSection charImage={$charImage} />
 
-	<AuthorsSection />
-</section>
+		<AuthorsSection />
+	</section>
+</main>
 
 <style lang="scss">
-	section#body {
+	main {
 		background-color: $black;
+	}
+
+	section#body {
 		padding: 1rem;
 	}
-	.hero {
+
+	div#hero__wrapper {
 		margin-top: 52px;
+	}
+
+	@media only screen and (min-width: 560px) {
+		main {
+			min-height: 100vh;
+			section#body {
+				display: flex;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		section#body {
+			max-width: 1080px;
+			margin: auto;
+		}
 	}
 </style>

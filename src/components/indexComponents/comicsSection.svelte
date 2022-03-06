@@ -2,7 +2,7 @@
 	export let comicImage;
 </script>
 
-<a href="/comics">
+<a href="/comics" id="myCard">
 	<div id="comicDiv" style="background-image: url({comicImage}.jpg);">
 		<div class="comicChild">
 			<p class="is-size-3">Comics</p>
@@ -33,6 +33,18 @@
 		}
 		div.comicChild:hover {
 			box-shadow: $red 0px 0px 10px;
+		}
+	}
+
+	@media only screen and (min-width: 560px) {
+		div#comicDiv {
+			margin-bottom: 0;
+			background: center;
+			div.comicChild {
+				p#info {
+					width: 100%;
+				}
+			}
 		}
 	}
 </style>
