@@ -35,9 +35,17 @@
 	}
 
 	@media only screen and (min-width: 560px) {
+		a {
+			flex-basis: 33.33%;
+		}
 		div#authorDiv {
 			margin-bottom: 0;
+			height: 20rem;
+			background: top/100% no-repeat;
+
 			div.authorChild {
+				background: linear-gradient(to top, rgb(26, 26, 26) 50%, rgba(0, 0, 0, 0) 100%);
+				justify-content: flex-end;
 				p#info {
 					width: 100%;
 				}

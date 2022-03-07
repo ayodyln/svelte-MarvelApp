@@ -50,6 +50,8 @@
 			min-height: 100vh;
 			section#body {
 				display: flex;
+				gap: 1rem;
+				
 			}
 		}
 	}
